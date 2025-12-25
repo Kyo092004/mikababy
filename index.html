@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Bookman Old Style", serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(
+        135deg,
+        rgba(5, 5, 5, 0.95),
+        rgba(90, 20, 60, 0.9),
+        rgba(160, 40, 100, 0.85)
+      );
+      color: #fff;
+    }
+
+    section {
+      position: relative;
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section:not(:last-of-type)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 3px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      line-height: 1.8;
+      padding: 0 10px;
+    }
+
+    /* Responsive carousel like a book page */
+    .carousel {
+      width: 80%;
+      max-width: 400px; /* book width on large screens */
+      aspect-ratio: 7 / 10; /* height adjusts automatically */
+      margin: 30px auto 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.1);
+    }
+
+    .carousel img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      object-fit: contain; /* maintain original aspect ratio */
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .carousel-buttons {
+      display: none;
+    }
+
+    /* Music button */
+    #playMusicBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 16px;
+      background: rgba(0,0,0,0.75);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    /* Responsive text and carousel for smaller devices */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .carousel {
+        width: 90%;
+        max-width: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .carousel {
+        width: 95%;
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <section>
+    <div>
+      <h1>How we started</h1>
+      <p>
+        I’ve admired you from afar for so long, silently cherishing every moment you were around. Before October even began, I felt a quiet admiration that I didn’t fully understand… until October 10, when I finally admitted to myself that I had a crush on you.
+
+Now, I am so thankful for our friend Elvin, who helped make a way for us to finally talk. On December 10, we started talking, and what began as a simple conversation has turned into something so meaningful. Every message, every laugh, every little moment since then has made me realize how grateful I am to have you in my life.
+
+Thank you for letting me be a part of your world, and for the joy you bring simply by being you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section>
+    <div>
+      <h1>Our First Christmas</h1>
+      <p>
+        This Christmas feels extra special because it is our first one together. We have faced challenges along the way. There were times before I realized my feelings for you, even when I started with your friend, but we did not let the past define us.
+
+Even though we met this late and have experienced pain and trauma from our past, we did not let it affect the love in the relationship we are building.
+
+What we have now is genuine and true. Our love has grown stronger through understanding, patience, and trust.
+
+Now, as we celebrate our first Christmas together, I feel so happy and grateful to share this moment with you. Merry Christmas, my baby! Here is to love, laughter, and many more holidays together.
+      </p>
+
+      <div class="carousel">
+        <img src="first.jpg" class="active" alt="First image">
+        <img src="second.jpg" alt="Second image">
+        <img src="lastly.jpg" alt="Third image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section>
+    <div>
+      <h1>A Prayer for Us</h1>
+      <p>
+        I pray that as we continue to build our relationship, we may face every challenge together with patience, understanding, and care. May we grow closer through every experience, learning from both the happy moments and the difficult ones.
+
+I am so thankful to have met you before 2025 ends. Your trust, kindness, and loyalty mean so much to me, and I promise to treasure them always. I will never change in a way that would hurt the connection we are building. Instead, I will strive to become the best version of myself so I can make you happy, proud, and feel loved every single day.
+
+Even though we are just beginning this journey, I dream of a future with you, of courting you with sincerity, sharing our lives, and one day building a family together. I want to celebrate every achievement you earn, from the smallest victories to the biggest ones, and always be there to support and encourage you.
+
+I love you so deeply and unconditionally. I trust you, and I hope that together we can nurture a love that grows stronger with each passing day. May our hearts stay open, our intentions stay pure, and our bond remain full of hope, joy, and commitment.
+
+Thank you for letting me know you, for sharing your presence, and for inspiring me to become a better person. I look forward to building something real and beautiful with you, step by step, with faith, patience, and love. I love you so much baby!
+      </p>
+    </div>
+  </section>
+
+  <!-- Hidden YouTube Background Music -->
+  <div style="position: fixed; bottom: -300px; left: -300px;">
+    <iframe
+      id="ytPlayer"
+      width="300"
+      height="200"
+      src="https://www.youtube.com/embed/-J7J_IWUhls?autoplay=1&mute=1&controls=0&loop=1&playlist=-J7J_IWUhls"
+      frameborder="0"
+      allow="autoplay; encrypted-media">
+    </iframe>
+  </div>
+
+  <!-- Play Music Button -->
+  <button id="playMusicBtn">▶ Play Music</button>
+
+  <script>
+    // Fade-in on scroll
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+
+    // Carousel auto-slide every 3 seconds
+    const images = document.querySelectorAll(".carousel img");
+    let index = 0;
+
+    function showImage(i) {
+      images.forEach(img => img.classList.remove("active"));
+      images[i].classList.add("active");
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage(index);
+    }
+
+    setInterval(nextImage, 3000); // Auto-slide
+
+    // Unmute music
+    const playBtn = document.getElementById("playMusicBtn");
+    const ytPlayer = document.getElementById("ytPlayer");
+
+    playBtn.addEventListener("click", () => {
+      ytPlayer.src = ytPlayer.src.replace("mute=1", "mute=0");
+      playBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
